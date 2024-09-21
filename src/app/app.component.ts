@@ -3,11 +3,12 @@ import { initFlowbite } from 'flowbite';
 import { OnInit } from '@angular/core';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent],
+  imports: [NavbarComponent, FooterComponent, ShopComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
