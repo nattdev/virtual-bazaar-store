@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { OnInit } from '@angular/core';
-import { Navbar } from './components/shared/navbar/navbar.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Navbar, FooterComponent],
+  imports: [NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
