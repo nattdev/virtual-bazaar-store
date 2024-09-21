@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { OnInit } from '@angular/core';
+import { Navbar } from './components/shared/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [Navbar],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
