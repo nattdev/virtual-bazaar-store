@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { OnInit } from '@angular/core';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { RouterOutlet } from '@angular/router';
 
