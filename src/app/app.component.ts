@@ -4,11 +4,12 @@ import { OnInit } from '@angular/core';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { ShopComponent } from './pages/shop/shop.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent, ShopComponent],
+  imports: [NavbarComponent, FooterComponent, ShopComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
