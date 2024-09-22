@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,5 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.scss'
 })
 export class ProductListComponent {
+  products: any[] = [];
 
+  constructor(private productsServices: ProductsService) {}
+
+  ngOnInit() {
+    this.logData();
+  }
+
+  logData() {
+    this.productsServices.getProducts().subscribe(data => {
+      this.products = data;
+    });
+  }
 }
