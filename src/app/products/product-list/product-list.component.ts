@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductsService } from '../../services/products.service';
+import { DataLoaderService } from '../../services/data-loader.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,16 +10,28 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductListComponent {
   products: any[] = [];
+  increment = 4;
+  maxItems = 20;
+  disableLoadMore = false;
 
-  constructor(private productsServices: ProductsService) {}
+  constructor(private dataLoaderService: DataLoaderService) {}
 
   ngOnInit() {
-    this.logData();
+    this.loadData();
   }
 
-  logData() {
-    this.productsServices.getProducts().subscribe(data => {
+  loadData() {
+    this.dataLoaderService.getProducts().subscribe(data => {
       this.products = data;
+
+      if (this.products.length == this.maxItems) {
+        this.disableLoadMore = true;
+      }
     });
+  }
+
+  loadMore() {
+    this.dataLoaderService.increaseLimit(this.increment);
+    this.loadData();
   }
 }
