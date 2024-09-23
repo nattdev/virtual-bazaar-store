@@ -19,6 +19,10 @@ export class DataLoaderService {
     return products;
   }
 
+  getProductsByCategory(category: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/category/${category}?limit=${this.limit}`);
+  }
+
   increaseLimit(increment: number): void {
     this.limit += increment;
   }
