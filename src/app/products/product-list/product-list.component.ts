@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataLoaderService } from '../../services/data-loader.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -15,15 +15,25 @@ export class ProductListComponent {
   maxItems = 20;
   disableLoadMore = false;
   category: string | null = null;
+  validCategories = [
+    "electronics",
+    "jewelery",
+    "men's clothing",
+    "women's clothing"
+  ];
 
-  constructor(private dataLoaderService: DataLoaderService, private route: ActivatedRoute) {}
+  constructor(private dataLoaderService: DataLoaderService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-       this.category = params.get('category');
+      this.category = params.get('category');
 
       if (this.category) {
-        this.loadProductsByCategory(this.category);
+        if (this.validCategories.includes(this.category)) {
+          this.loadProductsByCategory(this.category);
+        } else {
+          this.router.navigate(['/shop']);
+        }
       } else {
         this.loadData();
       }
