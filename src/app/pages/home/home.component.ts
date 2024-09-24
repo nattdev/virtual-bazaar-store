@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { SlicePipe } from '@angular/common';
+import { CarouselComponent } from "../../components/carousel/carousel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SlicePipe],
+  imports: [SlicePipe, CarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
