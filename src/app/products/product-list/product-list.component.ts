@@ -54,6 +54,9 @@ export class ProductListComponent {
     this.dataLoaderService.getProductsByCategory(category).subscribe(data => {
       this.products = data;
     });
+    if (this.products.length <= 8) {
+      this.disableLoadMore = true;
+    }
   }
 
   loadMore() {
