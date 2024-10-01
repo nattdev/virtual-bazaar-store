@@ -269,8 +269,7 @@
                     </div>
                 </div>
 
-                <button type="button" data-collapse-toggle="ecommerce-navbar-menu-1"
-                    aria-controls="ecommerce-navbar-menu-1" aria-expanded="false"
+                <button type="button" (click)="toggleHidden()"
                     class="inline-flex lg:hidden items-center justify-center hover:bg-gray-100 rounded-md dark:hover:bg-gray-700 p-2 text-gray-900 dark:text-white">
                     <span class="sr-only">
                         Open Menu
@@ -285,25 +284,25 @@
         </div>
 
         <div id="ecommerce-navbar-menu-1"
-            class="bg-gray-50 dark:bg-gray-700 dark:border-gray-600 border border-gray-200 rounded-lg py-3 hidden px-4 mt-4">
+            class="bg-gray-50 dark:bg-gray-700 dark:border-gray-600 border border-gray-200 rounded-lg py-3 px-4 mt-4" [ngClass]="{ 'hidden': isHidden }">
             <ul class="text-gray-900 text-sm font-medium dark:text-white space-y-3">
                 <li>
-                    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Home</a>
+                    <a (click)="toggleHidden()" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Home</a>
                 </li>
                 <li>
-                    <a routerLink="/shop" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Shop</a>
+                    <a (click)="toggleHidden()" routerLink="/shop" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Shop</a>
                 </li>
                 <li>
-                    <a routerLink="/shop/electronics" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Electronics</a>
+                    <a (click)="toggleHidden()" routerLink="/shop/electronics" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Electronics</a>
                 </li>
                 <li>
-                    <a routerLink="/shop/jewelery" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Jewelry</a>
+                    <a (click)="toggleHidden()" routerLink="/shop/jewelery" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Jewelry</a>
                 </li>
                 <li>
-                    <a routerLink="/shop/men's clothing" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Men's Clothing</a>
+                    <a (click)="toggleHidden()" routerLink="/shop/men's clothing" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Men's Clothing</a>
                 </li>
                 <li>
-                    <a routerLink="/shop/women's clothing" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Women's Clothing</a>
+                    <a (click)="toggleHidden()" routerLink="/shop/women's clothing" routerLinkActive="active" ariaCurrentWhenActive="page" class="hover:text-primary-700 dark:hover:text-primary-500">Women's Clothing</a>
                 </li>
             </ul>
         </div>
