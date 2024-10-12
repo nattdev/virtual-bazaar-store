@@ -1,27 +1,67 @@
-# VirtualBazaarStore
+# Tienda Virtual de Ropa y Accesorios 🛍️
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Una plataforma de eccomerce que permite explorar productos, navegar por categorías y ver información detallada de cada producto.
+  
+Actualmente en desarrollo para agregar funciones como el carrito de compras y pagos.
 
-## Development server
+## Funcionalidades 🚀
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Explorar tienda:** Permite el acceso a la tienda para visualizar los productos disponibles.  
 
-## Code scaffolding
+- **Visualización de productos:** Muestra productos traídos de una API externa con todos sus detalles.  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Navegación por categorías:** Facilita la búsqueda de productos mediante distintas categorías.  
 
-## Build
+- **Página de producto detallada:** Ofrece información detallada de cada producto seleccionado.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Demo
 
-## Running unit tests
+Puedes ver una demostración de la aplicación en el siguiente enlace: [Demo](https://virtual-bazaar-store.vercel.app/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalación ⚙️
 
-## Running end-to-end tests
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Puedes instalar Angular CLI con el siguiente comando:
 
-## Further help
+```bash
+npm install -g @angular/cli
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local.
+
+1. Clona este repositorio:
+
+   ```bash
+   git clone https://github.com/nattdev/virtual-bazaar-store
+   ```
+
+2. Navega a la carpeta del proyecto:
+
+   ```bash
+   cd virtual-bazaar-store
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicia la aplicación:
+
+   ```bash
+   ng serve
+   ```
+   
+## Contribuciones 🤝
+
+Si deseas contribuir a este proyecto:
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu funcionalidad o corrección de error: `git checkout -b mi-nueva-funcionalidad`.
+3. Realiza tus cambios y haz un commit: `git commit -m 'Añadir nueva funcionalidad'`.
+4. Sube los cambios a tu rama: `git push origin mi-nueva-funcionalidad`.
+5. Abre un pull request.
+
+¡Gracias por visitar este proyecto! Si te resultó útil, no dudes en darle una estrella ⭐ en GitHub.
